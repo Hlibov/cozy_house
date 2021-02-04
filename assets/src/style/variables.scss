@@ -1,0 +1,156 @@
+// Variables-custom Bootstrap 4
+
+$white-fa: #fafafa;
+$white-f6: #f6f6f6;
+$gray-400: #cdcdcd;
+$gray-700: #4c4c4c;
+$black-1с: #1c1b1d;
+$black-54: #545454;
+$black-29: #292929;
+$brown-2e: #2e2321;
+$gray-b2: #b2b2b2;
+$pink-f1: #f1cdb3;
+
+
+
+
+
+
+
+
+$colors: ();
+$colors: map-merge(("blue": $blue,
+        "indigo": $indigo,
+        "purple": $purple,
+        "pink": $pink-f1,
+        "red": $red,
+        "orange": $orange,
+        "yellow": $yellow,
+        "green": $green,
+        "teal": $teal,
+        "cyan": $white-f6,
+        "white": $white,
+        "gray": $gray-400,
+        "gray-dark": $gray-800), $colors);
+
+$primary: $cyan;
+$secondary: $pink-f1;
+$success: $black-29;
+$info: $white-f6;
+$warning: $white;
+$danger: $black-54;
+$light: $gray-400;
+$dark: $black;
+$alt: $gray-b2;
+$alt2: $white-fa;
+$hot: $brown-2e;
+
+
+$theme-colors: ();
+$theme-colors: map-merge(("primary": $primary,
+        "secondary": $secondary,
+        "success": $success,
+        "info": $info,
+        "hot": $hot,
+        "warning": $warning,
+        "danger": $danger,
+        "light": $light,
+        "dark": $dark), $theme-colors);
+
+
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge((0: 0,
+        1: ($spacer * .25),
+        2: ($spacer * .5),
+        3: $spacer,
+        4: ($spacer * 1.5),
+        5: ($spacer * 3),
+        6: ($spacer * 4.5),
+        7: ($spacer * 6),
+        8: ($spacer * 7.5),
+        9: ($spacer * 9),
+        10: ($spacer * 10.5)), $spacers);
+
+
+
+
+
+// This is the default html and body font-size for the base rem value.
+$rem-base: 16px;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg: $white-fa;
+$body-color: $gray-700;
+
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: Arial,
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+"Helvetica Neue",
+"Noto Sans",
+sans-serif,
+"Apple Color Emoji",
+"Segoe UI Emoji",
+"Segoe UI Symbol",
+"Noto Color Emoji";
+
+$font-family-serif: Georgia,
+"Times New Roman",
+serif;
+
+
+// Links
+//
+// Style anchor elements.
+
+$link-color: $light;
+$link-hover-color: $white;
+
+
+$h1-font-size: $font-size-base * 1.875;
+$h2-font-size: $font-size-base * 1.5;
+$h3-font-size: $font-size-base * 1.4;
+$h4-font-size: $font-size-base * 1.3;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (xl: 1200px);
+
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+
+// Jumbotron
+
+$jumbotron-padding: 0;
+$jumbotron-bg: null;
+
+
+// Allows for customizing button
+
+$btn-border-radius: 2rem;
+$btn-padding-y: 1.0625rem;
+$btn-padding-x: 2.8125rem;
+$btn-font-family: $font-family-serif;
+$btn-line-height: 1.0625rem;
+
+
+// Navbar
+
+$navbar-padding-y: $spacer / 2 !default;
+$navbar-padding-x: $spacer !default;
+
+$navbar-nav-link-padding-x: .5rem !default;
+
+$navbar-brand-font-size: $font-size-lg !default;

@@ -1,0 +1,27 @@
+.jumbotron {
+
+    @include media-breakpoint-up(xl) {
+        margin-top: rem-calc(22px);
+    }
+
+    h1 {
+        @include media-breakpoint-up(xl) {
+            margin-bottom: rem-calc(23px);
+        }
+    }
+
+    .btn {
+        @include media-breakpoint-up(xl) {
+            margin-left: rem-calc(-5px);
+        }
+    }
+
+    .lead {
+        font-size: rem-calc(15px);
+
+        @include media-breakpoint-up(xl) {
+            margin-bottom: rem-calc(38px);
+            line-height: 1.7;
+        }
+    }
+}

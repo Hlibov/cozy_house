@@ -1,0 +1,30 @@
+body {
+    font-size: rem-calc(15px);
+    font-family: $font-family-sans-serif;
+}
+
+.wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.bg-dark1 {
+    background-image: url("../img/bg-for-md.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+
+    @include media-breakpoint-up(md) {
+        background-image: url("../img/bg-for-md.jpg");
+    }
+
+    @include media-breakpoint-up(xl) {
+        background-image: url("../img/bg-for-xl.jpg");
+    }
+}

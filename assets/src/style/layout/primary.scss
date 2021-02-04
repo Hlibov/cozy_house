@@ -1,0 +1,159 @@
+.margin {
+    @include media-breakpoint-up(lg) {
+        margin-top: rem-calc(-66px);
+    }
+}
+
+.promo-img-holder {
+    @include media-breakpoint-down(sm) {
+        max-width: rem-calc(300px);
+        margin: 0 auto;
+    }
+
+    @include media-breakpoint-up(lg) {
+        margin-left: 4.625rem;
+        margin-right: -13.3125rem;
+        margin-top: -40px;
+    }
+}
+
+.about-img-holder {
+    max-width: rem-calc(300px);
+    margin-bottom: rem-calc(20px);
+
+    @include media-breakpoint-up(lg) {
+        margin-left: rem-calc(53px);
+    }
+}
+
+.about-text-holder {
+    max-width: rem-calc(356px);
+
+    @include media-breakpoint-up(lg) {
+        max-width: rem-calc(429px);
+        margin-left: rem-calc(32px);
+    }
+
+    h2 {
+        padding: 0;
+    }
+}
+
+.list-helps {
+    @extend %listreset;
+
+    .holder-icon {
+        margin-bottom: rem-calc(16px);
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: rem-calc(21px);
+        }
+    }
+}
+
+.item-help {
+    padding: rem-calc(8px);
+    font-family: $font-family-serif;
+    font-size: rem-calc(20px);
+    text-align: center;
+    width: rem-calc(185px);
+
+    @include media-breakpoint-up(md) {
+        width: 20%;
+        margin-bottom: rem-calc(59px);
+    }
+
+    p {
+        margin: 0;
+    }
+
+    [class^="icon-"] {
+        color: $secondary;
+        font-size: rem-calc(58px);
+
+    }
+}
+
+.donat {
+
+    &-text-holder {
+        max-width: rem-calc(440px);
+
+        @include media-breakpoint-up(lg) {
+            margin-left: rem-calc(-19px);
+        }
+
+        h2 {
+            padding-left: rem-calc(6px);
+            margin-bottom: rem-calc(20px);
+        }
+    }
+
+    &-text-box {
+        padding: rem-calc(0 10px);
+
+        .text {
+            max-width: rem-calc(374px);
+            color: $alt;
+            letter-spacing: rem-calc(2px);
+            font-size: rem-calc(12px);
+
+            p {
+                line-height: 1.5;
+                letter-spacing: 0;
+            }
+        }
+
+        .title {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: $danger;
+            margin-bottom: rem-calc(20px);
+            letter-spacing: rem-calc(1px);
+            margin-bottom: rem-calc(9px);
+        }
+    }
+
+    &-about {
+        max-width: rem-calc(394px);
+
+        @include media-breakpoint-up(lg) {
+            max-width: rem-calc(505px);
+            margin-top: rem-calc(-12px);
+            margin-left: rem-calc(-24px);
+        }
+    }
+
+    &-number-card {
+
+        max-width: rem-calc(320px);
+        padding: rem-calc(8px 13px);
+        margin-bottom: rem-calc(31px);
+        background-color: $secondary;
+        display: flex;
+        border-radius: rem-calc(8px);
+        font-family: 'Times New Roman',
+            Times,
+            serif;
+        font-size: rem-calc(18px);
+        display: flex;
+        align-items: center;
+        color: $success;
+
+        @include media-breakpoint-up(md) {
+            font-size: rem-calc(20px);
+        }
+
+        [class^="icon-"] {
+            font-size: rem-calc(32px);
+            margin-right: rem-calc(15px);
+        }
+
+        .number {
+            @include media-breakpoint-down(xs) {
+                font-size: rem-calc(13px);
+            }
+
+            letter-spacing: rem-calc(1px);
+        }
+    }
+}

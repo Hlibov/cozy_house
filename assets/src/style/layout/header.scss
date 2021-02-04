@@ -1,0 +1,105 @@
+.header {
+    width: 100%;
+    padding-top: rem-calc(30px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    @include media-breakpoint-up(md) {
+        padding-top: rem-calc(49px);
+    }
+
+    .navbar-collapse {
+
+        @include media-breakpoint-down(sm) {
+            height: calc(100vh - 60px);
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin: rem-calc(0 -30px);
+            background-color: $hot;
+            padding: rem-calc(25px 15px);
+        }
+    }
+
+    .navbar-nav {
+        @include media-breakpoint-down(sm) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    .nav-link {
+        &:hover {
+            color: $warning;
+        }
+    }
+
+    .nav-item {
+        position: relative;
+
+        @include media-breakpoint-down(sm) {
+            font-size: rem-calc(24px);
+            border-bottom: 1px solid $warning;
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin: rem-calc(0 11px);
+        }
+
+        a {
+
+            @include media-breakpoint-down(sm) {
+                color: $warning;
+                display: block;
+                padding: 10px 15px;
+            }
+
+            text-decoration: none;
+        }
+
+        .nav-link {
+
+            &::before {
+                @include animate(opacity);
+
+                content: "";
+                position: absolute;
+                height: rem-calc(2px);
+                border-radius: rem-calc(5px);
+                left: 0;
+                right: rem-calc(0);
+                top: 83%;
+                background-color: $secondary;
+                opacity: 0;
+
+                @include media-breakpoint-up(md) {
+                    left: rem-calc(8px);
+                    right: rem-calc(8px);
+                }
+            }
+
+            &:hover {
+                &::before {
+                    @include media-breakpoint-up(md) {
+                        opacity: 1;
+                    }
+                }
+            }
+
+        }
+
+        &.active {
+
+            .nav-link {
+                &::before {
+                    @include media-breakpoint-up(md) {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

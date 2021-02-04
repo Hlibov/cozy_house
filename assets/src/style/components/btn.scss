@@ -1,0 +1,11 @@
+.btn {
+    @include animate(background-color);
+
+    font-size: rem-calc(17px);
+    border: 0;
+
+    @include media-breakpoint-up(lg) {
+        padding: rem-calc(17px 45px);
+        letter-spacing: rem-calc(1px);
+    }
+}
